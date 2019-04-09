@@ -1,2 +1,2 @@
-# ss-server
-simple simple server
+# mysocks5
+a tiny socks5
