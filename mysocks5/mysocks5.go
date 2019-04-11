@@ -139,15 +139,15 @@ func stateVector(key []byte) []byte {
 
 func encrypt(text []byte, s []byte) []byte {
 	for l := 0; l < len(text); l++ {
-		/*s[256] = uint8(int(s[256]+1) % 256)
+		s[256] = uint8(int(s[256]+1) % 256)
 		i := s[256]
 		s[257] = uint8(int(s[257]+s[i]) % 256)
 		j := s[257]
 		s[i], s[j] = s[j], s[i]
 		t := int(s[i]+s[j]) % 256
 		k := s[t]
-		text[l] ^= k*/
-		text[l] = uint8(int(128+text[l]) % 256)
+		text[l] ^= k
+		/*text[l] = uint8(int(128+text[l]) % 256)*/
 	}
 	return text
 }
